@@ -36,11 +36,15 @@ A function that gets called after the main function is executed.
 //     callback();
 // }
 
-function greet(name)
+function hello(callback)
 {
-    console.log('Hello....' + name);
+    console.log('Hello....');
+    callback();
 }
 
-//hello("bando",greet);
+function greet()
+{
+    console.log('Good Morning..');
+}
 
-setInterval(() => greet("golu"),2000) //greet("golu") is wrong
+hello(greet); // hello(greet()) will directly invoke greet function first

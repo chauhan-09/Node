@@ -23,6 +23,11 @@ node package manager is world's largest registry of libraries and packages throu
 
 library that automatically runs a file when some changes are made
 
+6. Difference between setTimeout() and setInterval() function
+
+setTimeout only gets executed once after the specified interval
+setInterval get repeatedly excecuted after the specified interval
+
 */
 
 
