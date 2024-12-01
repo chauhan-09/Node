@@ -1,8 +1,6 @@
 {
-  "scripts": {
-     "serve": "nodemon app.js"
-  },
   "dependencies": {
+    "lodash": "^4.17.21",
     "nodemon": "^3.1.7",
     "prompt-sync": "^4.2.0"
   }
