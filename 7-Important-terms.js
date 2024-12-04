@@ -28,6 +28,25 @@ library that automatically runs a file when some changes are made
 setTimeout only gets executed once after the specified interval
 setInterval get repeatedly excecuted after the specified interval
 
+7. What is a server?
+
+server is a program that takes request from a client proccess it and give the ideal response to the client.
+server uses JSON to send data
+
+8. API
+
+Application Programming Interface is a set of rules and protocols that allow two services to communicate with each other.
+It acts as an mediator between two services
+e.g food delivery app using google map API for food delivery
+API has multiple endpoints and each endpoint refers to a separate page or functionality
+API Request Methods - Get,Post,Delete,Put
+
+9. Localhost
+
+Localhost means your own computer
+
+
+
 */
 
 
