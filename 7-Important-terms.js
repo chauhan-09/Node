@@ -49,6 +49,10 @@ Localhost means your own computer
 
 Every Database has its own Database Server which also interacts with the main server to facilitate a smooth communication between client and server
 
+11. Mongodb Compass
+
+It is a GUI (Graphical user Inteface) for accessing and managing our database.
+
 
 
 */
