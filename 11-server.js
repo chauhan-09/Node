@@ -22,6 +22,16 @@ app.get('/user', (req,res) => {
     res.send(obj);
 })
 
+app.post('/details', (req,res) => {
+    const d1 = {
+        name : 'narender',
+        age:'25',
+        salary:'25k',
+        phone:9384858493
+    }
+
+    res.send(d1);
+})
 /*
 
 express automatically converts json object to json string
