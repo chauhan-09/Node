@@ -53,8 +53,6 @@ Every Database has its own Database Server which also interacts with the main se
 
 It is a GUI (Graphical user Inteface) for accessing and managing our database.
 
-
-
 */
 
 

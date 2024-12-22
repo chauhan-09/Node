@@ -3,31 +3,31 @@ const mongoose = require('mongoose');
 //defining person schema
 
 const personSchema = new mongoose.Schema({
-    name:{
+    name: {
         type: String,
         required: true  //makes it a mandatory field
     },
-    age:{
+    age: {
         type: Number,
     },
-    work:{
+    work: {
         type: String,
-        enum: ['chef','manager','waiter'],  //only one of these values will be stored
-        required: true 
+        enum: ['chef', 'manager', 'waiter'],  //only one of these values will be stored
+        required: true
     },
-    mobile:{
+    mobile: {
         type: String,
         required: true,
     },
-    email:{
+    email: {
         type: String,
         required: true,
         unique: true      //only unique values will be stored
     },
-    address:{
-        type:String
+    address: {
+        type: String
     },
-    salary:{
+    salary: {
         type: Number,
         required: true
     }
@@ -37,6 +37,6 @@ const personSchema = new mongoose.Schema({
 //through the help of this model we will perform CRUD operations
 
 
-const Person = mongoose.model('Person',personSchema);
+const Person = mongoose.model('Person', personSchema);
 module.exports = Person;
 
