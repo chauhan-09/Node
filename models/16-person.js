@@ -12,7 +12,7 @@ const personSchema = new mongoose.Schema({
     },
     work: {
         type: String,
-        enum: ['chef', 'manager', 'waiter'],  //only one of these values will be stored
+        enum: ['chef', 'manager', 'waiter'],  /* only one of these values will be stored. This is case sensitive too */
         required: true
     },
     mobile: {
