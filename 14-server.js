@@ -49,6 +49,35 @@ app.get('/person', async (req,res) => {
     }
 })
 
+app.post('/menu' , async (req,res) => {
+
+    try{
+        const data = req.body;
+        const menuitem = new MenuItem(data);
+        const response = await menuitem.save()
+        console.log('Data saved');
+        res.status(200).json(response);
+    }
+    catch(err){
+        
+        console.log(err);
+        res.status(500).json({error:'Internal Server error'});
+    }
+})
+
+
+app.get('/menu', async (req,res) => {
+    try{
+        const response = await MenuItem.find();
+        res.status(200).json(response);
+    }
+    catch(err)
+    {
+        console.log(err);
+        res.status(500).json({error:'Internal Server error'})
+    }
+})
+
 app.listen('3000', () => {
     console.log('server is running...')
 })
