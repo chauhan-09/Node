@@ -35,6 +35,8 @@ const personSchema = new mongoose.Schema({
 
 //create person model using schema
 //through the help of this model we will perform CRUD operations
+//If you're using an ORM like Mongoose, it automatically pluralizes collection names by default. 
+//For instance, if you define a schema with the name Person, the corresponding collection will be named people.
 
 
 const Person = mongoose.model('Person', personSchema);
