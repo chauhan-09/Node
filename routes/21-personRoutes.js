@@ -66,4 +66,49 @@ router.get('/:workType' , async (req,res) => {
     }
 })
 
+router.put('/:id' , async (req,res) => {
+
+    try{       
+        
+        const PersonId = req.params.id; //Extract Id from URL
+        const updatedPerson = req.body; //store the updated data
+
+        const response = await Person.findByIdAndUpdate(PersonId,updatedPerson,{
+            new:true, //return the updated document
+            runValidators:true, //run mongoose validation
+        });
+        
+        if(!response) res.status(404).json({error: 'Invalid Person Id'});
+        else 
+        {
+            console.log('Data Updated');
+            res.status(200).json(response);
+        }
+    }
+    catch(err)
+    {
+        console.log(err);
+        res.status(404).json({error:'Internal Server Error'});
+    }
+})
+
+
+router.delete('/:id' , async (req,res) => {
+    try{         
+        
+        const PersonId = req.params.id;
+        const response = await Person.findByIdAndDelete(PersonId);
+
+        if(!response) res.status(404).json({error:'Invalid Person Id'});
+        else{
+            console.log('Data Deleted');
+            res.status(200).json({message:'Data Deleted Successfully'});
+        }
+    }catch(err)
+    {
+        console.log(err);
+        res.status(404).json({error:'Internal Server Error'});
+    }
+})
+
 module.exports = router;
