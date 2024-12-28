@@ -26,7 +26,7 @@
 callback function - 
 
 A function that is passed as an arguement to anther function.
-A function that gets called after the main function is executed.
+A function that gets called/executed after the main function has executed.
 
 */
 
@@ -36,15 +36,35 @@ A function that gets called after the main function is executed.
 //     callback();
 // }
 
-function hello(callback)
+// function hello(callback)
+// {
+//     console.log('Hello....');
+//     callback();
+// }
+
+// function greet()
+// {
+//     console.log('Good Morning..');
+// }
+
+// hello(greet); // hello(greet()) will directly invoke greet function first
+
+// setTimeout(hello,1000,10,5);
+
+// function hello(a,b)
+// {
+//     console.log(a+b);
+// }
+
+function hello(name,callback)
 {
-    console.log('Hello....');
+    console.log('Hello '+name);
     callback();
 }
 
-function greet()
+function intro()
 {
-    console.log('Good Morning..');
+    console.log('Namaste');
 }
 
-hello(greet); // hello(greet()) will directly invoke greet function first
+hello("sam",intro);

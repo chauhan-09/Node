@@ -26,7 +26,21 @@ library that automatically runs a file when some changes are made
 6. Difference between setTimeout() and setInterval() function
 
 setTimeout only gets executed once after the specified interval
-setInterval get repeatedly excecuted after the specified interval
+setInterval gets repeatedly excecuted after the specified interval
+
+setInterval can take multiple arguements like function to be called , time-interval , parameters passed to the called function
+It is repeatedly called until clearInterval() is encountered.
+It returns an id
+
+Syntax: 
+
+setInterval(add,1000,5,10); //remember add is not a callback function
+setTimeout(add,1000,5,10);  //same syntax for setTimeout but it gets executed only once
+
+function add(a,b)
+{
+   console.log(a+b);
+}
 
 7. What is a server?
 
