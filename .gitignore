@@ -1,3 +1,4 @@
 #files and folders that you don't want to save/commit will come here
 node_modules/
+.env
 

@@ -33,7 +33,21 @@ What Does "Staged" Mean in Git?
 In Git, staging is the process of preparing changes (modified files) to be included in the next commit. 
 Staged files are added to the staging area, which is like a temporary holding space where Git keeps track of changes you want to commit.
 
+4. git commit -m "made changes"
 
+This saves our code to local repository and commit all the new changes
+
+5. git push origin master
+
+sends your local commits to remote repository
+
+6. git pull
+
+If you're collaborating with others, you can fetch their changes and merge them into your local code using git pull
+
+7. git fetch
+
+tell us about any changes in the remote repo. it doesn't change the original content of the file it just notifies us
 
 
 */
