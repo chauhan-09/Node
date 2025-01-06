@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Person = require('.././models/16-Person.js');
+const Person = require('../models/16-Person.js');
 
 router.post('/', async (req,res) => {
      
