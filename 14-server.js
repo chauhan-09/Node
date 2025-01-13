@@ -13,8 +13,8 @@ app.get('/',(req,res) => {
     res.send('Welcome to the Home Page: ')
 })
 
-const personRoutes = require('./routes/21-personRoutes.js');
-const menuItemRoutes = require('./routes/22-menuItemRoutes.js');
+const personRoutes = require('./routes/personRoutes.js');
+const menuItemRoutes = require('./routes/menuItemRoutes.js');
 
 app.use('/person',personRoutes);
 app.use('/menu',menuItemRoutes);
